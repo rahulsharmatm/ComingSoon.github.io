@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Coming Soon</title>
+	<!-- css files -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+	<!-- ======= Header ======= -->
+	<header id="header" class="d-flex align-items-center">
+		<div class="container d-flex flex-column align-items-center">
+			<h1>Coming soon</h1>
+			<h2>We're working hard to improve our website and we'll ready to launch after</h2>
+			<div class="countdown d-flex justify-content-center">
+				<div class="count-days">
+					<h3 class="number"></h3>
+					<h4>Days</h4>
+				</div>
+				<div class="count-hours">
+					<h3 class="number"></h3>
+					<h4>Hours</h4>
+				</div>
+				<div class="count-minutes">
+					<h3 class="number"></h3>
+					<h4>Minutes</h4>
+				</div>
+				<div class="count-seconds">
+					<h3 class="number"></h3>
+					<h4>Seconds</h4>
+				</div>
+			</div>
+			<div class="subscribe">
+				<h4>Subscribe now to get the latest updates !</h4>
+				<form class="email-form">
+					<div class="subscribe-form">
+						<input type="email" name="emeail" placeholder="Enter your email address">
+						<input type="submit" name="" value="Subscribe">
+					</div>
+				</form>
+			</div>
+			<div class="social-link">
+				<a href="#"><i class="bi bi-facebook"></i></a>
+				<a href="#"><i class="bi bi-youtube"></i></a>
+				<a href="#"><i class="bi bi-twitter"></i></a>
+				<a href="#"><i class="bi bi-snapchat"></i></a>
+				<a href="#"><i class="bi bi-linkedin"></i></a>
+				<a href="#"><i class="bi bi-instagram"></i></a>
+				<a href="#"><i class="bi bi-whatsapp"></i></a>
+			</div>
+		</div>
+
+	</header>
+	<!-- =======End Header ======= -->
+	<main id="main">
+		<!-- ==========Countact us section========= -->
+		<section class="contact">
+			<div class="container">
+				<div class="section-title">
+					<h2>Contact Us</h2>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-lg-10">
+						<div class="info-wrap">
+							<div class="row">
+								<div class="col-lg-4 info">
+									<i class="bi bi-geo-alt"></i>
+									<h4>Location:</h4>
+									<p>D 508 Green Street<br>california , 90241</p>
+								</div>
+								<div class="col-lg-4 info ml-3">
+									<i class="bi bi-envelope"></i>
+									<h4>Email:</h4>
+									<p>info@example.com<br>contact@example.com</p>
+								</div>
+								<div class="col-lg-4 info mt-4 mt-lg-0">
+									<i class="bi bi-phone"></i>
+									<h4>Call:</h4>
+									<p>+1 8554 52587 5574<br>+1 4485 75546 0241</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-lg-10">
+						<form action="" class="email-form">
+							<div class="row">
+								<div class="col-lg-6">
+									<input type="text" name="name" placeholder="Your name" class="form-control" required>
+								</div>
+								<div class="col-lg-6 form-group mt-3 mt-md-0">
+									<input type="email" placeholder="Your Email" name="email" class="form-control" required>
+								</div>
+								<div class="form-group mt-3">
+									<input type="text" placeholder="Subject" name="Subject" class="form-control" required>
+								</div>
+								<div class="form-group mt-3">
+									<textarea name="" placeholder="Message" id="" name="message" rows="5" class="form-control" required></textarea>
+								</div>
+								<div class="text-center mt-3">
+									<button type="submit">Send Message</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- footer section -->
+	<footer id="footer">
+		<div class="container">
+			<div class="copyright">
+				&copy; Copyright <strong><span>ComingSoon</span></strong>
+			</div>
+			<div class="credits">
+				Designed by <a href="">BecomeDeveloper</a>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- countdown code -->
+<script>
+	(() => {
+		const endDate = new Date('May 12, 2024 10:59:59').getTime();
+		const countDays = document.querySelector('.count-days .number');
+		const countHours = document.querySelector('.count-hours .number');
+		const countMinutes = document.querySelector('.count-minutes .number');
+		const countSeconds = document.querySelector('.count-seconds .number');
+		
+		setInterval ( ()=>{
+			const currentDate = new Date().getTime();
+			const distance = endDate - currentDate;
+
+			        const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hrs = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const min = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const sec = Math.floor((distance %  (1000 * 60)) / 1000);
+
+            countDays.innerHTML=d;
+            countHours.innerHTML=hrs;
+            countMinutes.innerHTML=min;
+            countSeconds.innerHTML=sec;        
+		},1000);
+		
+
+	})();
+</script>
+	
+	<script type="text/javascript" src="vandor/js/bootrstrap.bundle.min.js"></script>
+</body>
+</html>
